@@ -1,4 +1,5 @@
 import React from "react";
+import Contador from "../Counter/counter";
 
 const ItemListContainer = (props) => {
     return (
@@ -8,6 +9,7 @@ const ItemListContainer = (props) => {
         <div className="card-body">
           <h5 className="card-title">{props.titulo}</h5>
           <p className="card-text">{props.descripcion}</p>
+          <Contador />
           <a href="#" class="btn btn-primary">Agregar al carrito</a>
         </div>
       </div>
