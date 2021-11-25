@@ -1,7 +1,7 @@
 import React from "react";
 import Contador from "../Counter/counter";
 
-const ItemListContainer = (props) => {
+const Item = (props) => {
     return (
         <div>
         <div className="card" Style="width: 18rem;">
@@ -17,6 +17,6 @@ const ItemListContainer = (props) => {
     )
 };
 
-export default ItemListContainer;
+export default Item;
 
 
