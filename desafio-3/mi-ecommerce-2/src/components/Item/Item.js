@@ -1,22 +1,22 @@
-import React from "react";
-import Contador from "../Counter/counter";
+import React from 'react'
+import { Card, Image } from 'semantic-ui-react'
 
-const Item = (props) => {
-    return (
-        <div>
-        <div className="card" Style="width: 18rem;">
-        <img className="card-img-top" src=".../100px180/" alt="Card"/>
-        <div className="card-body">
-          <h5 className="card-title">{props.titulo}</h5>
-          <p className="card-text">{props.descripcion}</p>
-          <Contador />
-          <a href="#" class="btn btn-primary">Agregar al carrito</a>
-        </div>
-      </div>
-      </div>
-    )
-};
+const CardExampleImageCard = ({data}) => (
+  <Card>
+    <Image src='' wrapped ui={false} />
+    <Card.Content>
+      <Card.Header>{data.name}</Card.Header>
+      <Card.Meta>{data.email}</Card.Meta>
+      <Card.Description>
+        {data.name} is a comedian living in Nashville.
+      </Card.Description>
+    </Card.Content>
+    <Card.Content extra>
+      <a>
+      
+      </a>
+    </Card.Content>
+  </Card>
+)
 
-export default Item;
-
-
+export default CardExampleImageCard

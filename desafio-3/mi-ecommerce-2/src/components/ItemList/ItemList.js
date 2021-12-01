@@ -1,12 +1,13 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect, useState} from 'react';
+import Item from '../Item/Item';
 
 const ItemList = () => {
-    const [item, setItem] = useState([])
+    const [items, setItems] = useState([]);
 
     useEffect(() => {
         fetch('https://jsonplaceholder.typicode.com/users')
         .then(response => response.json())
-        .then(json => setItem(json))
+        .then(json => setItems(json))
     }, []);
 
 
@@ -14,20 +15,11 @@ const ItemList = () => {
     return (
         <div>
             <h1>Lista de usuarios</h1>
-            {item.map(item => {
-                return (
-                    <div className="card" Style="width: 18rem;">
-                    <img className="card-img-top" src=".../100px180/" alt="Card"/>
-                    <div className="card-body">
-                      <h5 className="card-title">{item.name}</h5>
-                      <p className="card-text">{item.email}</p>
-                      <a href="#" class="btn btn-primary">Agregar al carrito</a>
-                    </div>
-                  </div>
-                )
-             })}
-        </div>
-    )
-}
+           {items.map((item) => {
+               return <Item data={item} />;
+           })}
+           </div>
+    );       
+};
 
 export default ItemList
