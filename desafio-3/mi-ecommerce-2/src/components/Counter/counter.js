@@ -2,9 +2,7 @@ import React from "react";
 import './counter.css';
 
 const Contador = () => {
-    var hoy = new Date();
-    var fecha = hoy.getDate() + '-' + ( hoy.getMonth() + 1 ) + '-' + hoy.getFullYear();
-    var hora = hoy.getHours() + ':' + hoy.getMinutes() + ':' + hoy.getSeconds();
+  
     const [counter, setCounter] = React.useState(0);
 
     const handleClick = () => {

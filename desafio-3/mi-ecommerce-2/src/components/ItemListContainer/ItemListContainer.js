@@ -1,10 +1,12 @@
 import React from 'react'
-import Item from './Item'
+import ItemList from '../ItemList/ItemList'
+import "../ItemListContainer/ItemListContainer.css"
+
 
 const ItemListContainer = () => {
     return (
-        <div>
-            <Item />
+        <div className="container">
+            <ItemList />
         </div>
     )
 }

@@ -1,22 +1,24 @@
+
+
 import React from 'react'
-import { Card, Image } from 'semantic-ui-react'
+import './Item.css'
+import { Card, Button, Image } from 'semantic-ui-react'
+import { Link } from 'react-router-dom'
 
-const CardExampleImageCard = ({data}) => (
-  <Card>
-    <Image src='' wrapped ui={false} />
-    <Card.Content>
-      <Card.Header>{data.name}</Card.Header>
-      <Card.Meta>{data.email}</Card.Meta>
-      <Card.Description>
-        {data.name} is a comedian living in Nashville.
-      </Card.Description>
-    </Card.Content>
-    <Card.Content extra>
-      <a>
-      
-      </a>
-    </Card.Content>
-  </Card>
-)
+ const Item = ({data}) => (
+   <Card>
+     <Image src={data.avatar_url} wrapped ui={false} />
+     <Card.Content className="cardContainer">
+       <Card.Header>{data.login}</Card.Header>
+       <Card.Meta>{data.email}</Card.Meta>
+       <Card.Description>
+         {data.login} is a comedian living in Nashville.
+       </Card.Description>
+     </Card.Content>
+     <Link to='/item'><Button>Mas info</Button></Link>
+   </Card>
+ )
 
-export default CardExampleImageCard
+
+export default Item
+
